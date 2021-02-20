@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .hr_divider {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+        .hr_divider span {
+            position: absolute;
+            top: -11px;
+            background: #fff;
+            padding: 0 6px;
+        }
+</style>
+<div class="text-center">
+    <div class="card">
+        <div class="card-body">
+            <p class="display-4">Post something...</p>
+            <div class="container pt-3">
+                <div class="row">
+                    <a asp-controller="Twitter" class="btn btn-primary btn-lg btn-block" asp-area="" asp-action="Index">Twitter</a>
+                </div>
+                <!--<span style="top: 20px; position: relative; background-color: white; padding: 4px;">Or</span>-->
+                <div class="hr_divider">
+                    <hr />
+                    <span>Or</span>
+                </div>
+                <div class="row">
+                    <a asp-controller="Reddit" class="btn btn-danger btn-lg btn-block" asp-area="" asp-action="Index">Reddit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
